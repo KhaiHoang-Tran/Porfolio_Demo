@@ -1,0 +1,212 @@
+
+/* dấu sao là chỉ tất cả các thẻ */
+/* combo reset css */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* --------------------------------header---------------------------- */
+body{
+    background: linear-gradient(51deg,rgba(2, 0, 36, 1) 0%, rgba(121, 9, 114, 1) 61%);
+    min-height: 100vh;
+    color: white;
+}   
+
+.container{
+    max-width: 1200px;
+    margin: 0  auto;
+    padding: 20px;
+}
+
+header{
+    /* background-color: plum; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    /* đặt cỡ chữ */
+    font-size: 40px;
+    font-weight: 600;
+    /* tô nền gradient cho phần tử */
+    background: linear-gradient(to right, #9932CC, #FF69B4);
+    /* cắt phần background theo hình dạng của chữ. */
+    background-clip: text;
+    /* làm màu chữ trong suốt */
+    color: transparent;
+}
+
+nav ul{
+    display: flex;
+    gap: 25px;
+    /* làm mất dấu chấm của thg list */
+    list-style: none;
+}
+
+nav ul li a{
+    /* làm mất dấu gạch chân của cái thg a */
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+    font-size: 20px;
+}
+
+  
+  a:hover {
+    color: lightgoldenrodyellow;
+}
+
+.button{
+    background-color: lightgoldenrodyellow;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    /* cho user biết khi nào mình tương tác đc bằng cách biến con trỏ thành 
+    hình dạng khác */
+    cursor: pointer;
+    /* hiệu ứng chuyển đổi mượt mà như animation */
+    transition: all 0.4s ease;
+}
+
+/* --------------------------------main---------------------------- */
+
+main{
+    display: flex;
+    justify-content:space-between ;
+    align-items: center;
+    margin-top : 50px;
+        
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.button_wrapper{
+    gap: 0px;
+}
+
+.content h1{
+    font-size: 65px;
+}
+.content span{
+    background: linear-gradient(to right, #9932CC, #FF69B4);    background-clip: text;
+    color: transparent;
+}
+
+/* trỏ vào thẻ thứ hai của content là thẻ p đứng thứ 2 */
+.content p:nth-child(2){
+    font-size: 35px;
+    color: rgb(200, 182, 226);
+}
+
+.content p:nth-child(3){
+    font-size: 20px;
+    color: (169, 169, 169);
+}
+
+.readMore{
+    border: 2px solid lightgoldenrodyellow ;
+    /* màu trong suốt */
+    background-color: transparent; 
+    position: relative;
+    z-index: 1;
+    /* ẩn cái phần bị tràn của readMore::before */
+    overflow: hidden;
+}
+
+/* cái class start gọi tới thg hover có td khi chạm vô sẽ có hiệu ứng */
+.start:hover{
+    /* thuộc tính hiệu ứng nè */
+    /* translateY làm hiệu ứng nảy lên */
+    transform: translateY(-3px);
+    /* hiệu ứng bóng */
+    box-shadow: 0 8px 20px rgba(153, 50, 204, 0.6)
+}
+
+.readMore::before{
+    content: ""; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: lightgoldenrodyellow;
+    transition: all 0.3s;
+    z-index: -1;
+}
+
+.readMore:hover::before{
+    width: 100%;
+}
+
+.boxs{
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.box{
+    background: linear-gradient(150deg, rgba(2, 0, 36, 1) 0%, rgba(214, 57, 219, 1) 0%, rgba(121, 9, 97, 1) 100%);
+    border: 2px solid transparent;
+    border-radius: 20px;
+    min-width: 150px;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.box:hover{
+    color: lightgoldenrodyellow ;
+    border-color: lightgoldenrodyellow;
+    transform: translateY(-3px); 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.desc {
+    opacity: 0.6;
+  }
+
+.end{
+   display: flex;
+   margin-top: 90px;
+   justify-content: center;
+}
+
+.icon{
+    display: flex;
+    font-size: 45px;
+    gap: 20px;
+    margin-bottom: 30px;
+    color: rgb(200, 182, 226);
+    border-radius: 100%;
+}
+
+.effect{
+    /* cố định chiều rộng,cao của cái ô vuông */
+    width: 50px;
+    height: 50px;
+    font-size: 40px;
+    /* biến cái ô vuông thành tròn */
+    border-radius: 50%;
+    /* làm mất dấu gạch chân của thẻ <a>, vì thẻ <a> có dấu gạch chân mặc định */
+    text-decoration: none;
+    /* căn chỉnh làm sao nó ở giữa ô tròn */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* hiệu ứng chuyển đổi mượt mà */
+    transition: all 0.3s ease;
+}
+
+.effect:hover{
+    transform: translateY(-3px); 
+    box-shadow: 0 8px 20px rgba(153, 50, 204, 0.6)  
+}
+
