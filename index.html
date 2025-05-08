@@ -19,7 +19,7 @@
     <div class="container">
         <header>
             <div class="logo">Kelvin</div>
-            <nav>
+            <nav id="mobie-nav">
                 <ul>
                     <li>
                         <a href="">Home</a>
@@ -41,15 +41,18 @@
                     <i class="fa-solid fa-handshake"></i>
                 </button>
                 <!-- only show when the screen is 900px -->
-                <div class="bar"><i class="fa-solid fa-bars"></i></div>
+                <div class="bar" id="menu-tooggle">
+                    <i class="fa-solid fa-bars" id="bar-icon"></i>
+                    <i style="display: none;" class="fa-solid fa-xmark" id="close-icon"></i>
+                </div>
             </div>
         </header>
 
     <!-- thẻ main dùng để bao lấy nội dung chính, chức năng giống thẻ div -->
         <main>
             <div class="content">
-                <h1>I'm, <span>Kelvin</span></h1>
-                <p>Web developer</p>
+                <h1 id="title">I'm, <span>Kelvin</span></h1>
+                <p id="description">Web developer</p>
                 <p> Tran Hoang Khai</p>
 
                 <div class="button_wrapper">
@@ -97,6 +100,7 @@
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <!-- link thẻ javascrip -->
     <script src="./app.js"></script>
+    <script src="./index.js"></script>
 </body>
 
 </html>

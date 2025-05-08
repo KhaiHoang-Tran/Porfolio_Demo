@@ -241,10 +241,41 @@ main{
     }
 } */
 @media (max-width:900px){
-    .container header nav,
+    /* .container header nav, */
     .container header .button{
         display: none;
     }
+
+    nav{
+        position: fixed;
+        right: -100%; 
+        top: 0;
+        width: 70%;
+        height: 100vh;
+        background-color: rgb(142, 62, 142);
+        padding: 20px;
+        z-index: 99;
+    }
+
+    .container header .bar{
+        position: relative;
+        display: block;
+        z-index: 100;
+    }
+
+    nav.active{
+        right: 0;
+    }
+
+    nav ul{
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    nav ul li a{
+        color: white;
+    }
+
     /* làm cho cái thanh bar hiện ra */
     .bar{
         display: block;
